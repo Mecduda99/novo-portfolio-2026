@@ -9,7 +9,7 @@ const experiences = [
     period: "2023 — Presente",
     description:
       "Lidero a SQUAD Front-end responsável por sustentar, refatorar e inovar as Landing Pages de aulas da plataforma de Ensino Online Superior e MBA para alunos de todo o Brasil. Foco em entregar experiências de aprendizagem dinâmicas, escaláveis e de alta performance, garantindo as melhores práticas de desenvolvimento e arquitetura front-end.",
-    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Liderança Técnica", "Arquitetura Front-end"],
+    technologies: ["React", "TypeScript", "Next.js", "SASS", "Liderança Técnica", "Arquitetura Front-end"],
   },
   {
     title: "Programadora Júnior",
@@ -17,7 +17,7 @@ const experiences = [
     period: "2021 — 2023",
     description:
       "Desenvolvi Landing Pages de aulas para a plataforma de Ensino Online Superior e MBA, contribuindo para uma nova experiência de aprendizagem dinâmica para alunos de todo o Brasil. Participei ativamente da implementação de componentes reutilizáveis e da otimização de performance das páginas.",
-    technologies: ["JavaScript", "React", "HTML/CSS", "Git"],
+    technologies: ["AngularJS", "TypeScript", "SASS", "HTML/CSS", "Git"],
   },
 ]
 
