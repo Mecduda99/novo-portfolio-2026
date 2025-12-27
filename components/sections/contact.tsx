@@ -1,26 +1,11 @@
-"use client"
+
 
 import type React from "react"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Linkedin, Github, Send } from "lucide-react"
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-  }
 
   return (
     <section id="contact" className="py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
@@ -32,59 +17,8 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="border-border/50">
-            <CardContent className="p-6 sm:p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Nome
-                  </label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Seu nome"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="seu@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Mensagem
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Sua mensagem..."
-                    rows={5}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                  />
-                </div>
-                <Button type="submit" className="w-full">
-                  <Send className="mr-2 h-4 w-4" />
-                  Enviar Mensagem
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
-          <div className="space-y-6">
-            <Card className="border-border/50 hover:border-primary/50 transition-colors">
+        <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border-border/50 hover:border-primary/50 transition-colors ">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
@@ -93,10 +27,10 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:mariaeduarda@example.com"
+                      href="mailto:dudacav42@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      mariaeduarda@example.com
+                      dudacav42@gmail.com
                     </a>
                   </div>
                 </div>
@@ -112,12 +46,12 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold mb-1">LinkedIn</h3>
                     <a
-                      href="https://linkedin.com/in/mariaeduarda"
+                      href="https://www.linkedin.com/in/maria-eduarda-costa-vieira-05b15b212"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      linkedin.com/in/mariaeduarda
+                      linkedin.com/in/maria-eduarda-costa-vieira-05b15b212
                     </a>
                   </div>
                 </div>
@@ -133,18 +67,17 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold mb-1">GitHub</h3>
                     <a
-                      href="https://github.com/maria-eduarda"
+                      href="https://github.com/Mecduda99"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      github.com/maria-eduarda
+                      github.com/Mecduda99
                     </a>
                   </div>
                 </div>
               </CardContent>
             </Card>
-          </div>
         </div>
 
         <footer className="mt-20 pt-8 border-t border-border text-center text-sm text-muted-foreground">

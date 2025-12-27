@@ -23,7 +23,7 @@ export function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
-    fetch("https://api.github.com/users/maria-eduarda/repos?sort=updated&per_page=10")
+    fetch("https://api.github.com/users/Mecduda99/repos?sort=updated&per_page=10")
       .then((res) => res.json())
       .then((data) => {
         setRepos(data)

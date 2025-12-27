@@ -5,7 +5,7 @@ const skillCategories = [
   {
     title: "Frontend",
     icon: Code2,
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML/CSS", "Responsive Design"],
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS, SASS", "HTML/CSS", "ATOMIC Design"],
   },
   {
     title: "Liderança",
@@ -22,12 +22,12 @@ const skillCategories = [
   {
     title: "Engenharia",
     icon: Server,
-    skills: ["Design Patterns", "Clean Code", "Performance", "Acessibilidade", "SEO", "CI/CD"],
+    skills: ["Software e Data Engineering", "Arquitetura Corporativa", "Infraestrutura como código", "CI/CD"],
   },
   {
     title: "Ferramentas",
     icon: Sparkles,
-    skills: ["Git", "GitHub", "VS Code", "Figma", "Vercel", "Jest", "Storybook"],
+    skills: ["Git", "GitHub e Git Lab", "VS Code", "Figma", "Vercel", "Cypress", "Storybook"],
   },
 ]
 

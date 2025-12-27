@@ -6,6 +6,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       </div>
 
@@ -39,13 +40,13 @@ export function Hero() {
 
         <div className="flex items-center justify-center gap-4 pt-4">
           <Button variant="ghost" size="icon" asChild className="hover:text-primary">
-            <a href="https://github.com/maria-eduarda" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/Mecduda99" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild className="hover:text-primary">
             <a
-              href="https://linkedin.com/in/mariaeduarda"
+              href="https://www.linkedin.com/in/maria-eduarda-costa-vieira-05b15b212"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -54,7 +55,7 @@ export function Hero() {
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild className="hover:text-primary">
-            <a href="mailto:mariaeduarda@example.com" aria-label="Email">
+            <a href="mailto:dudacav42@gmail.com" aria-label="Email">
               <Mail className="h-5 w-5" />
             </a>
           </Button>
