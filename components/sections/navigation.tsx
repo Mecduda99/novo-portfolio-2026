@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Briefcase, Heart, Menu, X } from "lucide-react"
+import { Butterfly } from "../icons/butterfly"
+import { Computer } from "../icons/computer"
+import { Memoji } from "../icons/memoji"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -17,33 +20,28 @@ export function Navigation() {
   }, [])
 
   const navItems = [
-    { label: "Sobre", href: "#about" },
-    { label: "Experiência", href: "#experience" },
-    { label: "Projetos", href: "#projects" },
-    { label: "Habilidades", href: "#skills" },
-    { label: "Contato", href: "#contact" },
+    { label: <><Memoji /></>, href: "#about" },
+    { label: <><Butterfly /></>, href: "#experience" },
+    { label: <><Computer /></>, href: "#projects" },
+    { label: <><Heart /></>, href: "#skills" },
+    { label: <><Briefcase /></>, href: "#" },
+    { label: <><Button variant="ghost" className="rounded-full text-foreground/80 bg-primary hover:bg-secondary">Contate-me</Button></>, href: "#contact" },  
   ]
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"
-      }`}
+      className={`${isScrolled ? "fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-background/80 backdrop-blur-md border mt-3 rounded-full" : "fixed top-0 left-0 right-0 z-50 transition-all duration-300"}`} 
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
-          <a href="#" className="text-lg sm:text-xl font-bold text-foreground hover:text-primary transition-colors">
-            Portfolio
-          </a>
-
+        <div className="flex items-center justify-center h-16 sm:h-20">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1 lg:gap-2">
+          <div className="hidden md:flex items-center gap-2 lg:gap-2">
             {navItems.map((item) => (
               <Button
                 key={item.href}
                 variant="ghost"
                 asChild
-                className="text-sm lg:text-base text-foreground/80 hover:text-primary"
+                className="group text-sm lg:text-base rounded-full text-foreground/80 hover:bg-transparent hover:text-secondary"
               >
                 <a href={item.href}>{item.label}</a>
               </Button>
