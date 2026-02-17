@@ -1,17 +1,29 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
 
 export function Hero() {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 animate-spin-slow">
+        <div
+          className="absolute inset-0 animate-spin-slow"
+          style={{ animationPlayState: isHovered ? "paused" : "running" }}
+        >
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto text-center space-y-8">
+      <div
+        className="max-w-5xl mx-auto text-center space-y-8"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         <div className="space-y-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight">
             Olá, sou{" "}

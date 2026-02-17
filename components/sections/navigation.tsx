@@ -20,20 +20,20 @@ export function Navigation() {
   }, [])
 
   const navItems = [
-    { label: <><Memoji /></>, href: "#about" },
-    { label: <><Butterfly /></>, href: "#experience" },
-    { label: <><Computer /></>, href: "#projects" },
-    { label: <><Heart /></>, href: "#skills" },
-    { label: <><Briefcase /></>, href: "#" },
+    { label: <><Memoji /> <span className="md:hidden text-sm">Sobre</span></>, href: "#about" },
+    { label: <><Butterfly /> <span className="md:hidden text-sm">Experiência</span></>, href: "#experience" },
+    { label: <><Computer /> <span className="md:hidden text-sm">Projetos</span></>, href: "#projects" },
+    { label: <><Heart /> <span className="md:hidden text-sm">Habilidades</span></>, href: "#skills" },
+    { label: <><Briefcase /> <span className="md:hidden text-sm">Portfólio</span></>, href: "#" },
     { label: <><Button variant="ghost" className="rounded-full text-foreground/80 bg-primary hover:bg-secondary">Contate-me</Button></>, href: "#contact" },  
   ]
 
   return (
     <nav
-      className={`z-50 left-1/2 -translate-x-1/2 mt-3 rounded-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 border backdrop-blur-md" : "border-none bg-transparent"}`} 
+      className={`z-50 mt-3 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "md:bg-background/80 md:border md:backdrop-blur-md" : "border-none bg-transparent"} ${isMobileMenuOpen ? "left-0 right-0 bg-transparent backdrop-blur-md" : "left-1/2 -translate-x-1/2 rounded-full"}`} 
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center h-16 sm:h-20">
+        <div className="flex items-center justify-end md:justify-center h-16 sm:h-20">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-2 lg:gap-2">
             {navItems.map((item) => (
@@ -52,7 +52,7 @@ export function Navigation() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className={`md:hidden bg-transparent backdrop-blur-md ${!isMobileMenuOpen ? "-mr-[5rem]" : ""}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -66,7 +66,7 @@ export function Navigation() {
               <a
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2 text-foreground/80 hover:text-primary hover:bg-accent rounded-md transition-colors"
+                className="flex items-center gap-2 px-4 py-2 text-foreground/80 hover:text-primary hover:bg-accent rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
